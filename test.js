@@ -17,11 +17,13 @@ board.on("ready", function () {
     if (snapshot.val().one == "1 on") {
       relay1.on();
     }
+    if (snapshot.val().one == "1 off") {
+      relay1.off();
+    }
     if (snapshot.val().one == "2 on") {
       relay2.on();
     }
-    if (snapshot.val().one == "1, 2 off") {
-      relay1.off();
+    if (snapshot.val().one == "2 off") {
       relay2.off();
     }
   });
