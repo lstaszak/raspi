@@ -15,7 +15,7 @@ board.on("ready", function () {
     if (this.cm < 100) {
       light.update({"one": "1 off"});
     } else if (this.cm > 100) {
-      light.update({"one": "2 off"});
+      light.update({"one": "1 on"});
     }
     light.update({"distance": this.cm});
   });
