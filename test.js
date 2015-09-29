@@ -1,5 +1,5 @@
-var five = require("/home/pi/node_modules/firebase");
-var firebase = require("/home/pi/node_modules/johnny-five");
+var five = require("firebase");
+var firebase = require("johnny-five");
 var firebaseRef = new firebase("https://beelab.firebaseio.com/test");
 var board = new five.Board();
 board.on("ready", function () {
