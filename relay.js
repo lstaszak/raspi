@@ -14,6 +14,8 @@ board.on("ready", function () {
   proximity.on("data", function () {
     if (this.cm < 100) {
       light.update({"one": "1 off"});
+    } else if (this.cm > 100) {
+      light.update({"one": "2 off"});
     }
     light.update({"distance": this.cm});
   });
