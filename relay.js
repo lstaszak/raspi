@@ -6,7 +6,8 @@ board.on("ready", function () {
   var light = firebaseRef.child("light");
   var proximity = new five.Proximity({
     controller: "HCSR04",
-    pin: 7
+    pin: 7,
+    pulse: 1000
   });
   var relay1 = new five.Relay(9);
   var relay2 = new five.Relay(10);
