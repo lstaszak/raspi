@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d4bcacce-5ffa-4cd3-b4b0-98d6d00fe792" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/relay.js" afterPath="$PROJECT_DIR$/relay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="raspi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/relay.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.22764228">
-              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -286,7 +287,7 @@
     <entry file="file://$PROJECT_DIR$/relay.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22764228">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
         </state>
       </provider>
