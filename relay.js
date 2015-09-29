@@ -3,6 +3,16 @@ var board = new five.Board();
 var firebase = require("firebase");
 var firebaseRef = new firebase("https://beelab.firebaseio.com/test");
 board.on("ready", function () {
+  var proximity = new five.Proximity({
+    controller: "HCSR04",
+    pin: 7
+  });
+  proximity.on("data", function () {
+    console.log(this.cm + "cm", this.in + "in");
+  });
+  proximity.on("change", function () {
+    console.log("The obstruction has moved.");
+  });
   var relay1 = new five.Relay(9);
   var relay2 = new five.Relay(10);
   relay1.on();
