@@ -11,8 +11,10 @@ board.on("ready", function () {
   var relay1 = new five.Relay(9);
   var relay2 = new five.Relay(10);
   proximity.on("data", function () {
-    if (this.cm < 100) {
-      light.update({'one': '1 off', 'two': '2 off'});
+    if (this.cm > 200) {
+      light.update({"one": "1 off", "two": "2 off"});
+    } else if (this.cm > 100) {
+      light.update({"one": "1 on", "two": "2 on"});
     }
   });
   relay1.on();
