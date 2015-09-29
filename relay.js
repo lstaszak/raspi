@@ -12,6 +12,9 @@ board.on("ready", function () {
   var relay1 = new five.Relay(9);
   var relay2 = new five.Relay(10);
   proximity.on("data", function () {
+    if (this.cm < 100) {
+      relay2.off()
+    }
     light.update({"distance": this.cm});
   });
   relay1.on();
