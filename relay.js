@@ -13,7 +13,7 @@ board.on("ready", function () {
   var relay2 = new five.Relay(10);
   proximity.on("data", function () {
     if (this.cm < 100) {
-      relay2.off()
+      light.update({"one": "1 off"});
     }
     light.update({"distance": this.cm});
   });
