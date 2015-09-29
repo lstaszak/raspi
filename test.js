@@ -3,7 +3,7 @@ var board = new five.Board();
 var firebase = require("firebase");
 var firebaseRef = new firebase("https://beelab.firebaseio.com/test");
 board.on("ready", function () {
-  var sensor = new five.Sensor.Digital(7);
+  var sensor = new five.Sensor("A0");
   sensor.on("change", function () {
     console.log(this.value);
   });
