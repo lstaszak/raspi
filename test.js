@@ -13,4 +13,10 @@ board.on("ready", function () {
   motion.on("motionend", function () {
     console.log("motionend");
   });
+  motion.on("change", function () {
+    console.log("change");
+  });
+  motion.on("data", function (data) {
+    console.log("data");
+  });
 });
