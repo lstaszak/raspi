@@ -3,25 +3,24 @@ var board = new five.Board();
 var firebase = require("firebase");
 var firebaseRef = new firebase("https://beelab.firebaseio.com/test");
 board.on("ready", function () {
+  var light = firebaseRef.child("light");
   var proximity = new five.Proximity({
     controller: "HCSR04",
     pin: 7
   });
-  proximity.on("data", function () {
-    console.log(this.cm + "cm", this.in + "in");
-  });
-  proximity.on("change", function () {
-    console.log("The obstruction has moved.");
-  });
   var relay1 = new five.Relay(9);
   var relay2 = new five.Relay(10);
+  proximity.on("data", function () {
+    if (this.cm < 100) {
+      light.update({'one': '1 off', 'two': '2 off'});
+    }
+  });
   relay1.on();
   relay2.on();
   this.repl.inject({
     relay: relay1,
     relay: relay2
   });
-  var light = firebaseRef.child("light");
   light.on("value", function (snapshot) {
     console.log(snapshot.val());
     if (snapshot.val().one == "1 on") {
