@@ -18,6 +18,5 @@ board.on("ready", function () {
   });
   motion.on("data", function (data) {
     console.log("data");
-    console.log(data);
   });
 });
