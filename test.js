@@ -14,17 +14,15 @@ board.on("ready", function () {
   var light = firebaseRef.child("light");
   light.on("value", function (snapshot) {
     console.log(snapshot.val());
-    if (snapshot.val().one == "0") {
-      //relay1.on();
+    if (snapshot.val().one == "1 on") {
+      relay1.on();
     }
-    if (snapshot.val().one == "1") {
-      //relay1.off();
+    if (snapshot.val().one == "2 on") {
+      relay2.on();
     }
-    if (snapshot.val().two == "0") {
-      //relay2.on();
-    }
-    if (snapshot.val().two == "1") {
-      //relay2.off();
+    if (snapshot.val().one == "1, 2 off") {
+      relay1.off();
+      relay2.off();
     }
   });
 });
