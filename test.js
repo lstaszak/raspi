@@ -1,6 +1,6 @@
 var five = require("johnny-five");
 var board = new five.Board();
-var firebase = require("firebase");
+var firebase = require("../firebase");
 var firebaseRef = new firebase("https://beelab.firebaseio.com/test");
 board.on("ready", function () {
   var relay1 = new five.Relay(9);
